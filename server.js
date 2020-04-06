@@ -8,6 +8,7 @@ const server = prerender({
 server.use(require('prerender-request-blacklist'));
 server.use(prerender.blacklist());
 server.use(prerender.httpHeaders());
-
+server.use(prerender.removeScriptTags());
+server.use(prerender.httpHeaders());
 server.start();
 
